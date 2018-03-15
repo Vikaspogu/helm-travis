@@ -3,6 +3,8 @@ jdk:
 - oraclejdk8
 services:
 - docker
+ssh_known_hosts:
+- openshift.opencontainer.io:8443
 env:
   global:
   - DOCKER_IMAGE_NAME=vikaspogu/demo
@@ -13,8 +15,8 @@ before_install:
 - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 - chmod 700 get_helm.sh
 - sudo ./get_helm.sh
-- curl -Lo oc https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz
-  && chmod +x oc && sudo mv oc /usr/local/bin/oc
+# - wget https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz
+#   && chmod +x oc && sudo mv oc /usr/local/bin/oc
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jobs:
@@ -27,5 +29,16 @@ jobs:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker build -t ${DOCKER_IMAGE_NAME}:$TRAVIS_BUILD_NUMBER .
     - docker push ${DOCKER_IMAGE_NAME}
-    - oc login https://openshift.opencontainer.io:8443/ -u admin -p $OSE_PASS
+    # - oc login https://openshift.opencontainer.io:8443/ -u admin -p $OSE_PASS
+    # - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER
+    #   --namespace demo-sample
+deploy:
+  provider: openshift
+  user: admin
+  password:
+    secure: sDvst2JugEyQLT7H1xFkoH+paT7PNUxAyZ4r5Tbaw+FpBScJfs0yHBabxlOfoRSBbnmUWWz3qtTyFn/CRvXdaQlRBKbwD7p9iWRSUKadyeTLkqmEvbB17ctw4lDffXI6SNniQzKkYYwFkkPi6GcgCqy9SFae55hfOEr0ILBR84pv5E+Nwl6N/Tlit19xGtRdR/cxtuq29kOPHcaaOzMJf8iB/Gz9iYPSrlFgVdIxJnVH8z7LE+q82+wjXgzi9bciH5XUj+bDlWV/sLQ4vm/D9FlVc44a/2CjEa+QDch48oLM7YP2a71cV4PSwqOkZXS8nhT+S1SdYy5eInQd7pzlDMzzatyRMNS6U2D3N9sCjp3oTztmOAe4YNH1tsRPQQBm/cF9D8exWuQzdSp06M+9OOpJRjytesQjPyrft0oyEsOsWtkVcihx7rWSI0psRI+mbqu8/TuX7dHFuIau+FXg7WG4pWCiE40jYj1gsE5Ihh4J/ZboK5sgwYByeFHEn0xBn84kDixSPJ/tgx11ZHS3vSqdGuzpVfz0Dx2SpdTfY1NCOyG38uEnIFK9lj5XEn11vMB/J/MAv2YDH1+axBlvVEoO/9u86pPwjuyCb/TL8yJb+bkaQELFYfieW6wIucpaAf9ujKtvoD6i+a3qsa+jpyucTnBy7fh7uHc9BYBakA8=
+  app: helm-travis
+  domain: https://openshift.opencontainer.io:8443/
+  script:
     - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER
+      --namespace demo-sample
