@@ -9,12 +9,13 @@ env:
   - secure: Xe5rP/bmJMDJeUFwjbAzPRyKDx3iKt0B5XmwSTKcv4zxN3JzbxdsIm95nKWH93lYLFdb8bs86tHqy8HGZEFkLvNY6XXJOi2xjJN9mEqPxVmqH9SG6uA5DXQ0Sj/2hp6HtSuh0r+KCLj85LS+BZpwqhKpjAwHBpflCOb7HDHCMxZn9e3Hd6g9gRN4BsLC6Br9K3tF3sgnLMBDFOgRyoyKqyK4FkIZpogoRp4kXHc15owJhGBO+Vp9AANx5zM7rQIwf3/JgOInupKQMZhGeocHCJolifdWudnZAJaV0Q21l8R8PvFeQijWRFgMqR0Jae0tTmO9uE3JkkoszgJupc2NldBekhKSxaG4432qseju8LOFoC3JfKA6w3NE7yJy8yFx2jl1CMH98ExCo10A0MgRf6tA92Px5+YCRj6nL3BpfG7UYuFezjcjrKgwMqb5cCZ4pR/bSw4zzr/BNR8YlV9sXw8XIkaP+0jfIc0ybUwcCAe/lHqxAj+PfKNWgPUag8FxWyGIsNH0Ert69Z6VEFO9mN5VjGoMfbC2JQw78RBnYQQax2ddxZKR971uGmy2eeKPQKoHW7dq5uFg27WsaO9ojSP8c1dhwtXpHF6MBGN43OCp+DSNipT9Q3XceUVDjj6fmc1SRBOuCX4NdAzxn7OcqYlK/9MKLOtbHp73vojkC1o=
   - secure: wNIs4mD7ChtvTMiQpo83DmfATgQ8kK2HIo0ALCisr31JD3xz9Nd2z9WRyENsDbIdp2HuLz57jiRKz7dCNyTryFHgwFtNJjcqBXof81xo4CZOsXlurQIYMIhUScuAmkcGHc5GHe/j1GWbaBSL8b1qb0Q5674Td02P3U8JA033GXin8nYlKjUf2nRA4FOKj7lClWZ8DC7q9yFpd4qQ8LMJgmOuezu25dsQt4UCifloYa6YtBPBbB1iEA5H3xzy81lJClBjzKCUd1P6Yw3arNdtf+h5O3x0oGqNfgZYzuKg1RO18g5cBxKG4FZIONHBlzIi24R0mIV02ya6Kxgc7auHJJSZrik1cLTuEKBF+pvLu5GnPpWIu0zfN4SZKcwuBz3b+kiw+yxdT6I4rh4W1+UE+nxHb3iJ8xeEETfGKuYYi4BDg5ib1k3d0gFTi8uGlP4683iYk5Jj2BZ3x+t6DX6puwbrLUVY25pRFUXdnZRCMS26Ylx4AHKwkAe9yCM+G13QnSdVul30KMrVoMAVDX3GsX+Hnhd70x05eUNa3vqgeOOZnpIS4xTdiBGhXoW8gO9055jeT1GRodc9rMb54xVgfjVR6Ck/PReCjs/09Q/A5mj3dB7kq9wjmwho3Ty8VpD9vur7IYcmjB1yO2QKpbHz2xc1eUUVDKsZjlG5qLYvJmo=
   - secure: RgcF/CkVf7eTgrjxjaI/zngZ1hZFbnEw6m56sBFHGLF2u+u9UeDGnajNE7Ib4lvZm48uU5SENGy0SxBIileDhoHsTmxXAmg3clzh6jcK50TyMAfNgC1KBIdbursmoinLpXryHRZCBBf3dyffM1uCjkdXtwMrAnT6H/6ktwwIq0VKxbB2X040zoKWMAEkb2XpzAHnKxSLuTDKjk1Y2y4zchWShjV1qiZYZBOp0Zdn3k+C3QgFAkRtJNmODA1KE877miCJSoYUlanY/Mh8al5SeaaOSAu1m794/k978tmbOyhMQzhkYK2pzfy/1PoqYrwkcm2QpoLTwyZCCrngAv6qBkRY7S4HXdikl6Y/lE4x3TGfmgqhG/1YJChDfMF8/dEpCHeUAqx58tEAT5lgjZfRsi3YHoLJB55uRp1ZHWPtp8pxnvr8ajzgCEsngZG6tpPcPbGyRe8jHRgcGCERcCiMI7REYmNPFE94bfU6zErNISsf1YiGaxdRcojQtCofOp0V2PzCwJAKpeSDdmhq8bby9LH0stULta5wTB6Q0dA2Qj0eHueFYbWPUSEA0gkzASQlvYRjr09V4tNFeILlCgQPMRRXnqPzLntyJy+7h5nmd9iHtUskC5X1D2ZFaFDlGYQ75CoZHe0ySurXQZIg7V4M4j9K9Q0zeTHZwM+LMn+7iak=
+  - secure: DaB/W2Pm9/mOnSLDvt5pWHiVs/o3OXOct5JZCZasGNTAuUrMfNsx3wIogXGVnoLu3n0rHH6q8jDH2DikglLog+uypl4QebTc4BQfTET3gbMWfALYd6CQ74ytzgjYA+N5QofU/NBOtcasBlXHMRFCsC+BWvLHaHNoJ2cu+WxzMpzYDzybiP0u7eaVWrxyPJ5bb70qMO1Pzc58Teuvh+pe3wdNUjyh1PfMnMTqw+9LeorM7ZtwtbAVx0SVr7cA6CHkgjXagkluNoLs4w8KBDz+iu6vQ/JyqGK1dBXVXPGJ4HJmrPTyPb8Vbtd64KY8LkofEqH7A2FHgRkKWZqofBt+n1Vov07oxUQqhktkX4K9iN+7qs4+Vm4/tHprFRYpO+VQVDVCkGgv5OzobJL5A4JRe7o5PL7quNok/riOR/rafT9huwpPcDodrUw/LAmxNArEn5zBiwYP2/EAUygbiQOJEOSOptPUzzsub8Hz0QGLppRdpRg58D43RIU5n+76qrNZCMa3S7M7uX7DBldBSD5PEU6h07mCipAohKhzNRTkNDo1cPc0BbgYiYCCTMlfnj9hvoyB0RJi5K1MWTbi0E7lFN3b5Qopm2LbIeFZa34HhDCmE1R/CvxQwOPVJj/uUqC9ZZ+S9pdJiFEoQqnDgjmszae0SC4ccB9oRR/YSmBptyw=
 before_install:
 - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 - chmod 700 get_helm.sh
 - sudo ./get_helm.sh
-- curl -Lo oc https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz && chmod +x oc && sudo mv oc /usr/local/bin/oc
-# - mkdir ${HOME}/.kube && cp kube-config ${HOME}/.kube/config
+- curl -Lo oc https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz
+  && chmod +x oc && sudo mv oc /usr/local/bin/oc
 jobs:
   include:
   - stage: build
@@ -25,5 +26,5 @@ jobs:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker build -t ${DOCKER_IMAGE_NAME}:$TRAVIS_BUILD_NUMBER .
     - docker push ${DOCKER_IMAGE_NAME}
-    - oc login https://openshift.opencontainer.io:8443/ -u admin -p 
+    - oc login https://openshift.opencontainer.io:8443/ -u admin -p ${OSE_PASS}
     - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER
