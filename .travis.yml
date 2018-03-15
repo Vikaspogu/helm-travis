@@ -15,6 +15,7 @@ before_install:
 - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 - chmod 700 get_helm.sh
 - sudo ./get_helm.sh
+- wget https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz && tar –xvf openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz && mv openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit /usr/local/bin/oc && export PATH=/usr/local/bin/oc:$PATH
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jobs:
@@ -27,8 +28,5 @@ jobs:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker build -t ${DOCKER_IMAGE_NAME}:$TRAVIS_BUILD_NUMBER .
     - docker push ${DOCKER_IMAGE_NAME}
-    - apt-get install -y ruby-dev rubygems
-    - gem install dpl
-    - rhc setup
-    - dpl --provider=openshift --user=admin --password=$OSE_PASS --domain=https://openshift.opencontainer.io:8443
+    - oc login https://openshift.opencontainer.io:8443 -u admin -p $OSE_PASS
     - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER --namespace demo-sample
