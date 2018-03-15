@@ -29,5 +29,6 @@ jobs:
     - docker push ${DOCKER_IMAGE_NAME}
     - apt-get install -y ruby-dev rubygems
     - gem install dpl
+    - rhc setup
     - dpl --provider=openshift --user=admin --password=$OSE_PASS --domain=https://openshift.opencontainer.io:8443
     - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER --namespace demo-sample
