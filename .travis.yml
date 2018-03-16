@@ -30,6 +30,4 @@ jobs:
     - docker build -t ${DOCKER_IMAGE_NAME}:$TRAVIS_BUILD_NUMBER .
     - docker push ${DOCKER_IMAGE_NAME}
     - oc login https://openshift.opencontainer.io:8443 -u admin -p $OSE_PASS --insecure-skip-tls-verify
-    - export TILLER_HOST="https://openshift.opencontainer.io:$(oc get svc/tiller-deploy -o jsonpath='{.spec.ports[0].port}')"
-    - echo $TILLER_HOST
-    - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER --namespace demo-sample --host $TILLER_HOST
+    - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER --namespace demo-sample --tiller-namespace tiller
