@@ -16,7 +16,7 @@ before_install:
 - chmod 700 get_helm.sh
 - sudo ./get_helm.sh
 - wget https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz
-- tar xvzf openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz && mv openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit /usr/local/bin/oc && export PATH=/usr/local/bin/oc:$PATH
+- tar xvzf openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit.tar.gz && sudo mv openshift-origin-client-tools-v1.5.1-7b451fc-linux-64bit /usr/local/bin/oc && export PATH=/usr/local/bin/oc:$PATH
 install:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jobs:
