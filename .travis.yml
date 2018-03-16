@@ -29,5 +29,5 @@ jobs:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker build -t ${DOCKER_IMAGE_NAME}:$TRAVIS_BUILD_NUMBER .
     - docker push ${DOCKER_IMAGE_NAME}
-    - oc login https://openshift.opencontainer.io:8443 -u admin -p $OSE_PASS
+    - oc login https://openshift.opencontainer.io:8443 -u admin -p $OSE_PASS --insecure-skip-tls-verify
     - helm upgrade --install sample-helm ./sample-helm --set image.tag $TRAVIS_BUILD_NUMBER --namespace demo-sample
