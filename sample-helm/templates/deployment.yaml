@@ -1,4 +1,5 @@
-apiVersion: apps/v1beta2
+#apiVersion: apps/v1beta2
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: {{ template "sample-helm.fullname" . }}
