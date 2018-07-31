@@ -8,6 +8,6 @@ public class RestApi {
 
     @GetMapping("/")
     public String get() {
-        return "Hello from Helm";
+        return "Hello from Helm!!!";
     }
 }
